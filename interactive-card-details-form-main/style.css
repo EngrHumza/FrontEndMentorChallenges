@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-var);
+    font-size: 18px;
+}
+
+:root {
+    /* ### Primary */
+
+    --linear-gradient-active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red-errors: hsl(0, 100%, 66%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+
+    /* Font Family */
+    --font-family-var: 'Space Grotesk', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.col-1 {
+    position: relative;
+    background: url(./images/bg-main-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 33%;
+    height: 625px;
+}
+
+.bg-card{
+    width: 95%;
+    /* height: 230px; */
+    height: 37%;
+    color: var(--white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.bg-card-front{
+    padding: 25px;
+    /* top: 90px; */
+    top: 15%;
+    /* left: 150px; */
+    left: 40%;
+    background-image: url(./images/bg-card-front.png);
+}
+
+.bg-card-front img{
+    margin-bottom: 55px;
+}
+
+.bg-card-front p{
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.bg-card-back{
+    top: 58%;
+    left: 54%;
+    background-image: url(./images/bg-card-back.png);
+}
+
+.col-2 {
+    width: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    /* width: 370px; */
+    width: 40%;
+    /* height: 340px; */
+    height: 54%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+form > label{
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--very-dark-violet);
+}
+
+form > input{
+    height: 40px;
+    margin-bottom: 25px;
+    color: var(--light-grayish-violet);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 14px;
+    border-color: var(--light-grayish-violet);
+    font-family: var(--font-family-var);
+}
+
+input::placeholder{
+    color: (--light-grayish-violet);
+}
+
+.date-cvc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-cvc label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.date-cvc input{
+    color: var(--light-grayish-violet);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 14px;
+    border-color: var(--light-grayish-violet);
+    font-family: var(--font-family-var);
+}
+
+.date{
+    width: 75px;
+    height: 45px;
+}
+
+.cvc{
+    width: 180px;
+    height: 45px;
+}
+
+form > button{
+    margin-top: 35px;
+    height: 50px;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    border: none;
+    border-radius: 10px;
+}
+
+.thankyou{
+    text-align: center;
+    display: none;
+}
+
+.thankyou div{
+    margin-bottom: 25px;
+}
+
+.thankyou button{
+    width: 350px;
+    height: 50px;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:375px) {
+    .row{
+        flex-direction: column;
+    }
+
+    .col-1{
+        width: 100%;
+        height: 240px;
+    }
+
+    .col-2{
+        width: 100%;
+        padding: 85px 15px 0px 15px
+        /* height: 66%; */
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .bg-card{
+        width: 77%;
+        height: 160px;
+        padding: 15px;
+    }
+
+    .bg-card-front{
+        top: 125px;
+        left: 17px;
+        z-index: 2;
+    }
+
+    .bg-card-back{
+        top: 30px;
+        left: 70px;
+    }
+
+    .bg-card-front img{
+        margin-bottom: 25px;
+    }
+    
+    .bg-card-front p{
+        margin-bottom: 10px;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .bg-card-front span{
+        font-size: 12px;
+    }
+}
